@@ -21,13 +21,13 @@ namespace WindowsFormsApp2
         {
             try
             {
-                if (numberofresistors.Text == "2") 
+                if (numberofresistors.Text == "2") //Checking how many resistors there are
                 {
-                    textBox6.ResetText();
-                    double R1 = double.Parse(textBox1.Text);
+                    textBox6.ResetText(); //Clearing the result textbox
+                    double R1 = double.Parse(textBox1.Text); 
                     double R2 = double.Parse(textBox2.Text);
-                    double Total = 1 / ((1 / R1) + (1 / R2));
-                    textBox6.AppendText(Total.ToString());
+                    double Total = 1 / ((1 / R1) + (1 / R2)); //Calculating resistance
+                    textBox6.AppendText(Total.ToString()); //Displaying result in the textbox
                 }
                 if (numberofresistors.Text == "3")
                 {
@@ -64,7 +64,7 @@ namespace WindowsFormsApp2
             catch
             {
                 textBox6.ResetText();
-                textBox6.AppendText("Error");
+                textBox6.AppendText("Error"); //Error message is displayed if an invalid character is typed in.
             }
         }
 
@@ -72,7 +72,7 @@ namespace WindowsFormsApp2
         {
             if (numberofresistors.Text == "2")
             {
-                textBox3.ReadOnly = true;
+                textBox3.ReadOnly = true; //Changing how many boxes can be typed in depending on how many resistors there are
                 textBox4.ReadOnly = true;
                 textBox5.ReadOnly = true;
             }
